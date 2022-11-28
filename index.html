@@ -4,94 +4,71 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     
     <title>Quiz APP | CodingMiklos</title>
+
  </head>
 
 <body>
-<header class="container-fluid mb-5">
-    <div class="row">
-        <div class="col-6">
-            <button id="View-Scores" type="button" class="btn-secondary d-inline-block mt-1">View high scores</button>
-            </div>
-        <div class="col-6">
-            <p class="d-flex justify-content-end time">Time:75s</p>
-            </div>
+    <header>
+    <h4 id="view-high-scores">View High Scores</h4>
+    <h4 class="stopwatch">Time: <span id="stopwatch"></span></h4>
+    </header>
+    
+    <div id="opener-container" class="appear">
+    <div class="container start">
+
+    <h1>Welcome to Coding Quiz Challenge</h1>
+    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will
+    penalize your score/time.</p>
+    <button class="btn startend" id="begin-game">Start Quiz</button></div>
+    </div>
+
+    <div id="quiz-container" class="conceal">
+    <div class="container questions">
+         <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
         </div>
-</header>
-    <main>
-    <div class="container">
-        <section id="introduction">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <h1 class="d-flex justify-content-center text-center" Coding Quiz Challange></h1>
-                <p class="d-flex justify-content-center text center">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will
-                penalize your score/time.</p>
-                <button id="Start" type="button" class="btn btn-succes mx-auto d-block" Start Quiz></button></p>
-                </div>
-            </div>
-        </section> 
-        
-    <section id="Questions">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <h2 id="Question">A Question</h2>
-                <ul class="px-0 py nobullets">
-                    <li class="mb-3"><button id="Answer1" value="0" type="button"
-                    class="btn btn-success ansBtn">answer2</button></li>
-                    <li class="mb-3"><button id="Answer2" value="1" type="button" class="btn btn-success ansBtn">answer2</button></li>
-                    <li class="mb-3"><button id="Answer3" value="2" type="button" class="btn btn-success ansBtn">answer3</button></li>
-                    <li class="mb-3"><button id="Answer4" value="3" type="button" class="btn btn-success ansBtn">answer4</button></li>
-                </ul>
-             </div>
+    </div
+
+    <div id="final-container" class="conceal">
+    <div class="container end">
+        <div id=score-banner>
+        <h1>All done!</h1>
+    </div>
+
+
+        <form id="initials-form" class="initials">
+            <p> Enter Initials:
+            <input type="text" name="initials" id="initials" class="text-input" />
+            <button class="btn startend" id="sumbit-score" type="submit">Submit</button></p>
+        </form></div>
+
+    </div>
+
+
+        <div id="high-score-container" class="conceal">
+            <div class="high-scores container">
+            <h1 class="high-score">High Scores</h1>
+            <ol id="high-score-list" class="score-list"></ol>
+            <div>
+            <button class="btn" id="go-back">Go back</button>
+            <button class="btn" id="clear-high-scores">Clear high scores</button></div>
         </div>
     </div>
-    </section> 
 
-    <section id="Final">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <h2>Done!</h2>
-                <p>Your final score is: <span id="score" class="pl-1">0</span></p>
-                <p>Enter initials: <span class="ml-1"><input placeholder="initials" id="Initials" /></span>
-                    <button id="Submit-Score" class="btn btn-success mx-1 my-1 d-inline-block">Submit</button></p>
-            </div>
+
+    <div class="conceal" id="correct">
+        <h2>Correct!</h2>
         </div>
-    </section>
-    <section id="High-Scores">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <h2>High Scores</h2>
-            <ol id="Scores-List"></ol>
-            <button id="GoBack" class="btn btn-success d-inline-block mx-1 my-1">Go back</button>
-            <button id="Clear-Scores" class="btn btn-success mx-1 my-1 d-inline-block">Clear scores</button>
-          </div>
-        </div>
-    </section>
-        </div>
-    </main>
+        <div class="conceal" id="incorrect">
+        <h2>incorrect</h2>
+    </div>
 
-    <div class="footer-margin">
-        <footer class="container-fluid p-0">
-            <div class="row p-2 text-center">
-            </div>
-        </footer>
-    
-        
-       
-    
 
-<script src="script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-</body>
+    <script src="script.js"></script>
+    </body>
 
 </html>
