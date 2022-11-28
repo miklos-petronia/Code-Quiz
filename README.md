@@ -16,6 +16,8 @@ THEN I can save my initials and my score
 ## Technologies
 HTML, CSS and javascript technologies was used for this project.  
 ## Illustrations
+![image](https://user-images.githubusercontent.com/113649566/204212390-d629d37e-68bb-4976-807d-0593cbdd9e61.png)
+
 
 ## Sources
 Some inspiration for developing a quiz question came from you tube and git hub to develop this code quiz questionaire. Honourable mentions: Achigas, siennameow, rwaynewhite15 and hilbug
